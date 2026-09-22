@@ -4,6 +4,10 @@ ShopEase is a full-stack e-commerce web application built with React, Node.js, E
 
 It provides a complete shopping experience for customers along with an admin dashboard for managing products, categories, customers, and orders.
 
+## Live Demo
+
+[Open ShopEase](https://shop-ease-woad-beta.vercel.app/)
+
 ## Features
 
 ### Customer Features
@@ -324,7 +328,6 @@ Possible future improvements include:
 - Search and advanced filtering
 - Pagination improvements
 - Sales analytics
-- Production deployment
 - Automated testing
 - CI/CD integration
 
