@@ -125,6 +125,19 @@ function Navbar() {
                       </Link>
                     </li>
 
+                    {/* Admin Dashboard */}
+                    {user?.role === "admin" && (
+                      <li>
+                        <Link
+                          to="/admin"
+                          className="dropdown-item d-flex align-items-center gap-2"
+                        >
+                          <FaBoxOpen />
+                          Admin Dashboard
+                        </Link>
+                      </li>
+                    )}
+
                     <li>
                       <hr className="dropdown-divider" />
                     </li>
