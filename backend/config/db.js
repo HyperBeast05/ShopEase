@@ -1,9 +1,12 @@
 import mysql from "mysql2/promise";
 import dotenv from "dotenv";
+import fs from "fs";
 
 dotenv.config();
 
 const dbPort = Number(process.env.DB_PORT) || 3306;
+
+const isProduction = process.env.NODE_ENV === "production";
 
 const pool = mysql.createPool({
   host: process.env.DB_HOST,
@@ -11,6 +14,12 @@ const pool = mysql.createPool({
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
   port: dbPort,
+
+  ...(isProduction && {
+    ssl: {
+      ca: fs.readFileSync(process.env.DB_SSL_CA, "utf8"),
+    },
+  }),
 
   waitForConnections: true,
   connectionLimit: 10,

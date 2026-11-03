@@ -21,3 +21,6 @@ Thumbs.db
 # Editor files
 .vscode/
 .idea/
+
+# Aiven SSL certificate
+database/ca.pem

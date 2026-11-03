@@ -3,11 +3,11 @@
 -- Fresh-install schema only: no existing user, product, cart, or order data.
 -- Database name: shopease_db
 
-CREATE DATABASE IF NOT EXISTS `shopease_db`
+CREATE DATABASE IF NOT EXISTS `ShopEase_db`
   CHARACTER SET utf8mb4
   COLLATE utf8mb4_0900_ai_ci;
 
-USE `shopease_db`;
+USE `ShopEase_db`;
 
 -- Disable FK checks while creating the schema.
 SET FOREIGN_KEY_CHECKS = 0;
