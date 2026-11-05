@@ -92,6 +92,19 @@ function Navbar() {
                   </button>
 
                   <ul className="dropdown-menu dropdown-menu-end">
+                    {/* Admin Dashboard - visible only to admins */}
+                    {user?.role === "admin" && (
+                      <li>
+                        <Link
+                          to="/admin"
+                          className="dropdown-item d-flex align-items-center gap-2"
+                        >
+                          <FaBoxOpen />
+                          Admin Dashboard
+                        </Link>
+                      </li>
+                    )}
+
                     {/* Profile */}
                     <li>
                       <Link
